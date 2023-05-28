@@ -219,8 +219,7 @@ class RESTClientObject(object):
             logger.debug("response body: %s", r.data)
 
         if not 200 <= r.status <= 299:
-            raise ApiException(http_resp=r)
-
+            print(str(ApiException(http_resp=r)))
         return r
 
     def GET(self, url, headers=None, query_params=None, _preload_content=True,
